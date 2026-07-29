@@ -1,27 +1,19 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body{
-    background:
-    linear-gradient(
-        180deg,
-        #c8f7ff,
-        #8fdcff,
-        #dff9ff,
-    );
-    height: 100vh;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    
-}
-.background{
-    position: fixed;
-    width:100%;
-    background-image:
-    radial-gradient(white 2px,transparent 2px);
-    background-size: 80px 80px;
-    opacity: .4;
+
+background:linear-gradient(
+
+180deg,
+
+#dff9ff,
+
+#baf2ff,
+
+#fdf6ff
+
+);
+
+font-family:Arial,sans-serif;
+min-height:100vh;
+overflow-x:hidden;
 
 }
