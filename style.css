@@ -38,15 +38,14 @@ body{
 }
 
 .hero h1{
-
     font-family:'Syne',sans-serif;
-
-    font-size:clamp(4rem,10vw,8rem);
+    font-size:clamp(3rem,8vw,7rem);
     line-height:.9;
+    letter-spacing:-3px;
 
-    letter-spacing:-4px;
+    max-width:100%;
+    word-break:break-word;
 }
-
 .subtitle{
     margin-top:25px;
     font-size:1.2rem;
@@ -67,4 +66,135 @@ body{
 
     transition:.35s;
 
+}
+.enter-btn:hover{
+
+background:#8e73ff;
+
+    color:#09070d;
+
+}
+.bg-glow{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(160px);
+    z-index:-3;
+    pointer-events:none;
+}.glow-1{
+
+    width:500px;
+    height:500px;
+
+    background:#6b3cff;
+
+    top:-150px;
+    left:-120px;
+
+    opacity:.18;
+
+}
+
+.glow-2{
+
+    width:420px;
+    height:420px;
+    background:#9d72ff;
+
+    bottom:-120px;
+    right:-100px;
+
+    opacity:.15;
+}
+
+.noise{
+
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+    opacity:.12;
+
+    background-image:
+
+    repeating-radial-gradient(
+        circle at 0 0,
+        rgba(255,255,255,.05) 0px,
+        rgba(255,255,255,.02) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+
+    mix-blend-mode:overlay;
+
+    z-index:999;
+
+}
+
+    .line{
+ position:fixed;
+    height:1px;
+
+    background:rgba(180,151,255,.18);
+    z-index:-1;
+}
+
+.top-line{
+
+    top:70px;
+    left:0;
+    width:45%;
+
+}
+.bottom-line{
+
+    bottom:90px;
+    right:0;
+    width:38%;
+}
+/* ===========================
+   HERO IMAGE
+=========================== */
+
+.hero-image{
+
+    width:260px;
+
+    margin:45px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    display:block;
+
+    filter:
+        drop-shadow(0 0 40px rgba(153,118,255,.35));
+
+    transition:.4s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.03);
+
+}
+.moon{
+    position:absolute;
+    right:-220px;
+    top:40px;
+    width:650px;
+    
+    filter:
+        blur(.3px)
+        drop-shadow(0 0 80px #8d6cff);
+    pointer-events:none;
+    z-index:-1;
+    opacity: .28;
+filter:
+    drop-shadow(0 0 90px rgba(162,120,255,.45));
 }
