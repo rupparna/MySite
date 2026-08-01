@@ -16,3 +16,21 @@ const moon=document.querySelector(".moon");
 setTimeout(()=>{
 moon.classList.add("moon-active");
 },700);
+
+setInterval(() => {
+
+    document.body.classList.add("glitch");
+
+    setTimeout(() => {
+        document.body.classList.remove("glitch");
+    }, 120);
+
+}, 7000);
+
+function glitch(){
+    document.body.classList.add("glitch");
+    setTimeout(() => {
+        document.body.classList.remove("glitch");
+    }, 120);
+}
+    setinterval(glitch, 7000);

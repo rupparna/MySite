@@ -340,63 +340,50 @@ pointer-events:none;
 }
 .screen-glitch{
 
-    position:fixed;
-    inset:0;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999999;
 
-    pointer-events:none;
-
-    opacity:0;
-
-    z-index:99999;
+    opacity: 0;
 
     background:
     repeating-linear-gradient(
         0deg,
-        transparent 0px,
-        transparent 3px,
-        rgba(255,255,255,.08) 4px
+        rgba(255,255,255,.12) 0px,
+        rgba(255,255,255,.12) 2px,
+        transparent 2px,
+        transparent 5px
     );
 
-    mix-blend-mode:screen;
-
-    animation:screenGlitch 7s infinite;
+    animation: screenGlitch 6s infinite;
 
 }
 
 @keyframes screenGlitch{
-0%,96%,100%{
 
-opacity:0;
-transform:translateX(0);
-
+0%,95%,100%{
+    opacity:0;
+    transform:none;
 }
 
-96.5%{
-
-opacity:1;
-transform:translateX(-4px);
-
+96%{
+    opacity:1;
+    transform:translateX(-8px) skewX(3deg);
 }
+
+96.3%{
+    transform:translateX(10px);
+}
+
+96.6%{
+    transform:translateX(-6px);
+}
+
 97%{
-transform:translateX(5px);
-
+    opacity:0;
+    transform:none;
 }
-97.5%{
-
-transform:translateX(-2px);
-
-}
-98%{
-
-opacity:0;
-transform:translateX(0);
-
-}
-
-}
-body{
-
-animation:crt 7s infinite;
 
 }
 
@@ -411,14 +398,10 @@ transform:none;
 96.5%{
 
 transform:translateY(-2px);
-
 }
-
 97%{
 transform:translateY(2px);
-
 }
-
 97.5%{
 
 transform:translateX(-1px);
@@ -428,7 +411,29 @@ transform:translateX(-1px);
 98%{
 
 transform:none;
+}
 
 }
+body.glitch{
+
+    transform: translateX(5px);
+
+    filter:
+        contrast(1.15)
+        brightness(1.08)
+        saturate(1.2);
+
+}
+body.glitch #logo{
+    text-shadow:
+   -4px 0 #8f5cff,
+     4px 0 #5fe9ff,
+     0 0 25px  rgba(175,120,255,.8);
+     filter: brightness(1.2);
+    
+}
+
+body.glitch .hero{
+    transform:translateX(4px);
 
 }
