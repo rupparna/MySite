@@ -6,6 +6,10 @@ I wanted to make a personal website that felt a little different from the usual 
 
 I'm always learning, experimenting, and creating, so this is just one stop in that journey🌸
 
+## 🤖 AI Use Declaration
+
+I used AI for debugging help and for assisting with tasks like making JPG images have transparent backgrounds. All design decisions, creative ideas, and final implementation were done by me.
+
 ## Demo
 
 <img width="960" height="408" alt="image" src="https://github.com/user-attachments/assets/d3e964dc-2c25-454b-87bd-87924b894470" />
